@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nét Mực — Studio xăm nghệ thuật tại TP.HCM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Be Vietnam Pro", sans-serif; font-size: 17px; line-height: 1.6; color: #161412; background: #F3EDE3; }
+  h1, h2, h3 { font-family: "Cormorant Garamond", serif; color: #161412; }
+  img { filter: grayscale(1) contrast(1.15); display: block; width: 100%; object-fit: cover; }
+  a { color: #161412; }
+  a:hover { text-decoration-color: #A63D2F; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 96px 0; }
+  h2 { font-size: 40px; margin-bottom: 8px; }
+  h2 .accent { color: #A63D2F; }
+  .kicker { color: #6E675E; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .lead { color: #6E675E; max-width: 640px; margin-bottom: 32px; }
+
+  /* Hero */
+  .hero { position: relative; height: 100vh; min-height: 560px; padding: 0; overflow: hidden; }
+  .hero img { height: 100%; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: rgba(243,237,227,0.25); }
+  .hero-text { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1; width: 90%; }
+  .hero-text h1 { font-size: 64px; line-height: 1.1; }
+  .hero-text p { font-size: 19px; margin: 16px 0 28px; }
+  .cta { display: inline-block; background: #A63D2F; color: #F3EDE3; text-decoration: none; padding: 14px 32px; font-weight: 700; border: none; cursor: pointer; }
+  .cta:hover { background: #161412; }
+
+  /* Studio */
+  .studio { background: #F3EDE3; }
+  .studio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .studio-grid img { aspect-ratio: 3 / 4; }
+  .studio-grid img.second { margin-top: 40px; }
+
+  /* Collection */
+  .collection { background: #E9E0CE; }
+  .collection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .collection-grid figure:nth-child(3n+2) { margin-top: 48px; }
+  .collection-grid img { aspect-ratio: 4 / 5; }
+  .collection-grid figcaption { margin-top: 12px; }
+  .collection-grid figcaption b { font-family: "Cormorant Garamond", serif; font-size: 24px; display: block; }
+  .collection-grid figcaption span { color: #6E675E; font-size: 15px; }
+
+  /* Process */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .step { background: #E9E0CE; padding: 32px 24px; }
+  .step .num { font-family: "Cormorant Garamond", serif; font-size: 64px; color: #A63D2F; line-height: 1; }
+  .step h3 { font-size: 24px; margin: 12px 0 8px; }
+
+  /* Prices */
+  .prices { background: #E9E0CE; }
+  .price-row { display: flex; justify-content: space-between; gap: 24px; padding: 20px 0; border-bottom: 1px solid #161412; }
+  .price-row b { font-family: "Cormorant Garamond", serif; font-size: 24px; }
+  .price-row span { color: #6E675E; }
+  .price-tag { color: #A63D2F; font-weight: 700; white-space: nowrap; }
+
+  /* Form */
+  form { max-width: 640px; }
+  label { display: block; margin-bottom: 16px; font-weight: 500; }
+  input, select, textarea { width: 100%; margin-top: 6px; padding: 12px; border: 1px solid #161412; background: #F3EDE3; font-family: "Be Vietnam Pro", sans-serif; font-size: 16px; color: #161412; }
+  .form-note { color: #6E675E; font-size: 15px; margin-top: 16px; }
+  footer { padding: 48px 0; border-top: 1px solid #161412; color: #6E675E; }
+
+  @media (max-width: 768px) {
+    body { font-size: 16px; }
+    section { padding: 56px 0; }
+    h2 { font-size: 30px; }
+    .hero-text h1 { font-size: 40px; }
+    h3, .step h3, .collection-grid figcaption b, .price-row b { font-size: 20px; }
+    .studio-grid, .collection-grid, .steps { grid-template-columns: 1fr; }
+    .collection-grid figure:nth-child(3n+2) { margin-top: 0; }
+    .studio-grid img.second { margin-top: 0; }
+    .step .num { font-size: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. Hero -->
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=1920&q=80" alt="Ảnh mẫu: tác phẩm xăm blackwork trên lưng, đen trắng tương phản cao">
+  <div class="hero-text">
+    <h1>Nét Mực</h1>
+    <p>Studio xăm nghệ thuật — TP.HCM</p>
+    <a class="cta" href="#dat-lich">Đặt lịch tư vấn</a>
+  </div>
+</header>
+
+<main>
+<!-- 2. Giới thiệu studio và nghệ sĩ -->
+<section class="studio">
+  <div class="wrap">
+    <p class="kicker">Giới thiệu</p>
+    <h2>Ít hình, kỹ, <span class="accent">bền màu.</span></h2>
+    <p class="lead">Nét Mực làm việc theo triết lý chậm mà chắc: mỗi hình xăm được tư vấn kỹ, phác thảo riêng và thực hiện tỉ mỉ để mực bền theo năm tháng. Chuyên blackwork, fine-line và dotwork.</p>
+    <div class="studio-grid">
+      <div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=1200&fit=crop&q=80" alt="Ảnh mẫu: chân dung nghệ sĩ xăm">
+        <p style="margin-top:12px;">Nghệ sĩ chính: <strong>[CẦN BỔ SUNG]</strong></p>
+        <p>Địa chỉ: [CẦN BỔ SUNG] — Điện thoại: [CẦN BỔ SUNG]</p>
+      </div>
+      <img class="second" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=900&h=1200&fit=crop&q=80" alt="Ảnh mẫu: không gian làm việc của studio">
+    </div>
+  </div>
+</section>
+
+<!-- 3. Bộ sưu tập theo phong cách -->
+<section class="collection">
+  <div class="wrap">
+    <p class="kicker">Bộ sưu tập</p>
+    <h2>Tác phẩm <span class="accent">theo phong cách</span></h2>
+    <p class="lead">Tất cả ảnh dưới đây là ảnh mẫu, chưa phải tác phẩm thật của studio.</p>
+    <div class="collection-grid">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm blackwork">
+        <figcaption><b>Rừng Đêm — Blackwork</b><span>10 × 15 cm — mẫu</span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm blackwork">
+        <figcaption><b>Mắt Cú — Blackwork</b><span>8 × 12 cm — mẫu</span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm fine-line">
+        <figcaption><b>Cành Mảnh — Fine-line</b><span>6 × 10 cm — mẫu</span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm fine-line">
+        <figcaption><b>Chân Dung Mảnh — Fine-line</b><span>9 × 12 cm — mẫu</span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm dotwork">
+        <figcaption><b>Chấm Mờ — Dotwork</b><span>12 × 12 cm — mẫu</span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&h=1000&fit=crop&q=80" alt="Ảnh mẫu: tác phẩm dotwork">
+        <figcaption><b>Vũ Trụ Chấm — Dotwork</b><span>15 × 15 cm — mẫu</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Quy trình 4 bước -->
+<section>
+  <div class="wrap">
+    <p class="kicker">Quy trình</p>
+    <h2>Bốn bước, <span class="accent">rõ ràng từ đầu.</span></h2>
+    <div class="steps" style="margin-top:32px;">
+      <div class="step"><div class="num">I</div><h3>Tư vấn ý tưởng</h3><p>Nghe câu chuyện của bạn, gợi ý phong cách và vị trí phù hợp.</p></div>
+      <div class="step"><div class="num">II</div><h3>Phác thảo &amp; chốt mẫu</h3><p>Vẽ mẫu riêng, chỉnh đến khi bạn ưng mới bắt đầu xăm.</p></div>
+      <div class="step"><div class="num">III</div><h3>Xăm</h3><p>Vệ sinh an toàn tuyệt đối, kim dùng 1 lần, mực đạt chuẩn.</p></div>
+      <div class="step"><div class="num">IV</div><h3>Chăm sóc sau xăm</h3><p>Hướng dẫn kiêng cữ và dưỡng da để hình lên màu đẹp, bền lâu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Bảng giá mẫu -->
+<section class="prices">
+  <div class="wrap">
+    <p class="kicker">Bảng giá</p>
+    <h2>Toàn bộ dưới đây là <span class="accent">giá mẫu.</span></h2>
+    <p class="lead">Giá thật = [CẦN BỔ SUNG]. Giá mẫu chỉ để tham khảo trước khi tư vấn.</p>
+    <div class="price-row"><div><b>Hình nhỏ — Fine-line</b><br><span>Từ 1.500.000đ — Giá mẫu</span></div><span class="price-tag">1.500.000đ+</span></div>
+    <div class="price-row"><div><b>Hình vừa — Blackwork</b><br><span>Từ 3.500.000đ — Giá mẫu</span></div><span class="price-tag">3.500.000đ+</span></div>
+    <div class="price-row"><div><b>Hình lớn / Dotwork</b><br><span>Báo giá theo thiết kế — Giá mẫu</span></div><span class="price-tag">Theo giờ tư vấn</span></div>
+  </div>
+</section>
+
+<!-- 6. Form đặt lịch tư vấn -->
+<section id="dat-lich">
+  <div class="wrap">
+    <p class="kicker">Đặt lịch</p>
+    <h2>Đặt lịch <span class="accent">tư vấn</span></h2>
+    <form id="booking-form">
+      <label>Họ tên
+        <input type="text" name="name" required placeholder="Họ tên của bạn">
+      </label>
+      <label>Số điện thoại
+        <input type="tel" name="phone" required placeholder="Số điện thoại">
+      </label>
+      <label>Phong cách quan tâm
+        <select name="style">
+          <option>Blackwork</option>
+          <option>Fine-line</option>
+          <option>Dotwork</option>
+        </select>
+      </label>
+      <label>Kích thước mong muốn
+        <input type="text" name="size" placeholder="Ví dụ: khoảng 10 × 15 cm">
+      </label>
+      <label>Mô tả ý tưởng
+        <textarea name="idea" rows="4" placeholder="Kể ngắn gọn ý tưởng hình xăm của bạn"></textarea>
+      </label>
+      <button class="cta" type="submit">Gửi yêu cầu tư vấn</button>
+      <p class="form-note">Form hiện chỉ nhận thông tin hiển thị — chưa gửi đi thật.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Nét Mực</strong> — Studio xăm nghệ thuật, TP.HCM. Địa chỉ: [CẦN BỔ SUNG] — Điện thoại: [CẦN BỔ SUNG].</p>
+    <p>Tất cả ảnh trên trang là ảnh mẫu. Giá trên trang là giá mẫu.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("booking-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Đây chỉ là giao diện mẫu — yêu cầu chưa được gửi đi thật. Studio sẽ liên hệ khi form chính thức hoạt động.");
+  });
+</script>
+</body>
+</html>
